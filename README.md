@@ -10,4 +10,4 @@ Aplicación de consola desarrollada como **proyecto universitario en C#** para g
 - Alertar cuando hay gastos altos o saldo negativo
 - Menú interactivo en consola
 
-## Estructura del proyecto
+Proyect in Progress...
