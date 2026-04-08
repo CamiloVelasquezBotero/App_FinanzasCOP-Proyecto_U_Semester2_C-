@@ -1,0 +1,15 @@
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/bin/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/bin/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.deps.json
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/bin/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.runtimeconfig.json
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/bin/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.dll
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/bin/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.pdb
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.AssemblyInfoInputs.cache
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.AssemblyInfo.cs
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.csproj.CoreCompileInputs.cache
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.sourcelink.json
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.dll
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/refint/App_FinanzasCOP-Proyecto_U_Semester2_C-.dll
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.pdb
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/App_FinanzasCOP-Proyecto_U_Semester2_C-.genruntimeconfig.cache
+/workspaces/App_FinanzasCOP-Proyecto_U_Semester2_C-/obj/Debug/net10.0/ref/App_FinanzasCOP-Proyecto_U_Semester2_C-.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "App_FinanzasCOP-Proyecto_U_Semester2_C-/1.0.0": {
+        "runtime": {
+          "App_FinanzasCOP-Proyecto_U_Semester2_C-.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "App_FinanzasCOP-Proyecto_U_Semester2_C-/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
