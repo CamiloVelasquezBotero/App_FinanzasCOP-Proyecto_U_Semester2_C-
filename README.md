@@ -12,6 +12,5 @@ Aplicación de consola desarrollada como **proyecto universitario en C#** para g
 
 Proyect in Progress...
 
-## Integrantes:
-Heiner Goez Urrego
-Camilo Velasquez Botero
+## Owners:
+Heiner Goez Urrego | Camilo Velasquez Botero
