@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("App_FinanzasCOP-Proyecto_U_Semester2_C-")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16ec8707719ef71b47177b03d62487b13b97bf2c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01830105cc5268230dc81ff47a39e46fedd26461")]
 [assembly: System.Reflection.AssemblyProductAttribute("App_FinanzasCOP-Proyecto_U_Semester2_C-")]
 [assembly: System.Reflection.AssemblyTitleAttribute("App_FinanzasCOP-Proyecto_U_Semester2_C-")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
