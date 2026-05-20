@@ -1,16 +1,39 @@
-# App_FinanzasCOP
+# App Finanzas COP
 
-Aplicación de consola desarrollada como **proyecto universitario en C#** para gestionar finanzas personales en pesos colombianos (COP). Permite registrar ingresos y gastos, organizarlos por categorías y visualizar el saldo disponible.
+Sistema de finanzas personales desarrollado en C#.
+
+## Arquitectura
+
+| Archivo | Responsabilidad |
+|---|---|
+| Program.cs | Punto de entrada |
+| SistemaMenu.cs | Orquestación del flujo |
+| ConsolaUI.cs | Entrada y salida por consola |
+| MovimientoService.cs | Lógica del negocio |
+| Movimiento.cs | Modelo de datos |
 
 ## Funcionalidades
+
 - Registrar ingresos
 - Registrar gastos
-- Mostrar lista de movimientos
-- Calcular saldo actual
-- Alertar cuando hay gastos altos o saldo negativo
-- Menú interactivo en consola
+- Ver saldo
+- Ver historial completo
+- Filtrar gastos por categoría
+- Alertas de saldo negativo
+- Alertas de gastos altos
 
-Proyect in Progress...
+## Casos de prueba
 
-## Owners:
-Heiner Goez Urrego | Camilo Velasquez Botero
+| Caso | Resultado esperado |
+|---|---|
+| Registrar gasto negativo | Error |
+| Registrar gasto alto | Advertencia |
+| Saldo negativo | Alerta |
+| Filtrar categoría existente | Lista filtrada |
+
+## Integrantes
+
+- Camilo Velasquez Botero
+- Heiner Goez Urrego
+
+#                                               ----- Proyecto Universitario ---
