@@ -69,4 +69,64 @@ public class SistemaMenu
     {
         Console.WriteLine("\nSaldo actual: " + saldo + " COP");
     }
+
+    /// <summary>
+    /// Muestra el menú del historial.
+    /// </summary>
+    static void MostrarMenuHistorial()
+    {
+        Console.WriteLine("\n1. Ver historial completo");
+        Console.WriteLine("2. Filtrar por categoria");
+
+        int opcion = ConsolaUI.LeerOpcion();
+
+        if (opcion == 1)
+        {
+            MostrarHistorialCompleto();
+        }
+        else if (opcion == 2)
+        {
+            FiltrarHistorial();
+        }
+    }
+
+    static void MostrarHistorialCompleto()
+    {
+        List<Movimiento> gastos = MovimientoService.ObtenerGastos();
+
+        if (gastos.Count == 0)
+        {
+            ConsolaUI.MostrarMensaje("No hay gastos registrados");
+            return;
+        }
+
+        foreach (Movimiento mov in gastos)
+        {
+            Console.WriteLine("\n====================");
+            Console.WriteLine("Categoria: " + mov.Categoria);
+            Console.WriteLine("Descripcion: " + mov.Descripcion);
+            Console.WriteLine("Monto: " + mov.Monto);
+        }
+    }
+
+    static void FiltrarHistorial()
+    {
+        string categoria = ConsolaUI.LeerTexto("Ingrese la categoria: ");
+
+        List<Movimiento> filtrados = MovimientoService.FiltrarPorCategoria(categoria);
+
+        if (filtrados.Count == 0)
+        {
+            ConsolaUI.MostrarMensaje("No se encontraron gastos");
+            return;
+        }
+
+        foreach (Movimiento mov in filtrados)
+        {
+            Console.WriteLine("\n====================");
+            Console.WriteLine("Categoria: " + mov.Categoria);
+            Console.WriteLine("Descripcion: " + mov.Descripcion);
+            Console.WriteLine("Monto: " + mov.Monto);
+        }
+    }
 }
