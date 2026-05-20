@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SistemaMenu
 {
@@ -9,67 +10,83 @@ public class SistemaMenu
 
         while (opcion != 5)
         {
-            MostrarMenu();
-            opcion = LeerOpcion();
+            ConsolaUI.MostrarMenu();
 
-            if (opcion == 1)
+            opcion = ConsolaUI.LeerOpcion();
+
+            switch (opcion)
             {
-                saldo = Movimientos.RegistrarIngreso(saldo);
-            }
-            else if (opcion == 2)
-            {
-                saldo = Movimientos.RegistrarGasto(saldo);
-            }
-            else if (opcion == 3)
-            {
-                MostrarSaldo(saldo);
-            } 
-            else if(opcion == 4) {
-                Movimientos.VerGastos();
-            }
-            else if (opcion == 5)
-            {
-                Console.WriteLine("Saliendo del sistema...");
-            }
-            else
-            {
-                Console.WriteLine("Opcion invalida");
+                case 1:
+                    saldo = ProcesarIngreso(saldo);
+                    break;
+
+                case 2:
+                    saldo = ProcesarGasto(saldo);
+                    break;
+
+                case 3:
+                    ConsolaUI.MostrarSaldo(saldo);
+                    break;
+
+                case 4:
+                    MostrarMenuHistorial();
+                    break;
+
+                case 5:
+                    ConsolaUI.MostrarMensaje("Saliendo del sistema...");
+                    break;
+
+                default:
+                    ConsolaUI.MostrarMensaje("Opcion invalida");
+                    break;
             }
         }
     }
 
-    public static void MostrarMenu()
+    /// <summary>
+    /// Procesa el registro de un ingreso.
+    /// </summary>
+    static decimal ProcesarIngreso(decimal saldo)
     {
-        Console.WriteLine("\n===== Sistema de Finanzas Personales (COP) =====");
-        Console.WriteLine("1. Registrar ingreso");
-        Console.WriteLine("2. Registrar gasto");
-        Console.WriteLine("3. Ver saldo actual");
-        Console.WriteLine("4. Ver historial de gastos");
-        Console.WriteLine("5. Salir");
-        Console.Write("Seleccione una opcion: ");
+        decimal monto = ConsolaUI.LeerMonto("Ingrese el monto del ingreso (COP): ");
+
+        string categoria = ConsolaUI.LeerTexto("Ingrese la categoria: ");
+        string descripcion = ConsolaUI.LeerTexto("Ingrese la descripcion: ");
+
+        decimal nuevoSaldo = MovimientoService.RegistrarIngreso(saldo, monto);
+
+        ConsolaUI.MostrarMensaje("Ingreso registrado correctamente");
+
+        return nuevoSaldo;
     }
 
-    public static int LeerOpcion()
+    /// <summary>
+    /// Procesa el registro de un gasto.
+    /// </summary>
+    static decimal ProcesarGasto(decimal saldo)
     {
-        int opcion;
+        decimal monto = ConsolaUI.LeerMonto("Ingrese el monto del gasto (COP): ");
 
-        try
+        string categoria = ConsolaUI.LeerTexto("Ingrese categoria: ");
+        string descripcion = ConsolaUI.LeerTexto("Ingrese descripcion: ");
+
+        Movimiento movimiento = new Movimiento(categoria, descripcion, monto);
+
+        decimal nuevoSaldo = MovimientoService.RegistrarGasto(saldo, movimiento);
+
+        if (monto > 200000)
         {
-            opcion = Convert.ToInt32(Console.ReadLine());
+            ConsolaUI.MostrarMensaje("Advertencia: gasto alto detectado");
         }
-        catch
+
+        if (nuevoSaldo < 0)
         {
-            opcion = -1;
+            ConsolaUI.MostrarMensaje("Alerta: saldo negativo");
         }
 
-        return opcion;
+        return nuevoSaldo;
     }
-
-    public static void MostrarSaldo(decimal saldo)
-    {
-        Console.WriteLine("\nSaldo actual: " + saldo + " COP");
-    }
-
+    
     /// <summary>
     /// Muestra el menú del historial.
     /// </summary>
